@@ -137,7 +137,7 @@ def StripeIllum(k):
         for it, file in enumerate([os.path.basename(x) for x in glob.glob("stills/Exp2*.jpg")]):
             if it%mo == 0:
                 os.system('sudo cp stills/%s gifstills/%s' % (file, file))
-        os.system('sudo convert -delay 20 -loop 0 gifstills/* /var/www/bixel/cam/timelapse.gif')
+        os.system('sudo convert -delay 20 -loop 0 gifstills/* cam/timelapse.gif')
 
     pixels.fill(green)
     pixels.show()
@@ -162,11 +162,11 @@ def StripeIllum(k):
 
     #OUTPUT TO WEB - INITIAL AND CURRENT IMAGES
     if k == 1:
-        os.system('sudo cp stills/Snap%s%s.jpg /var/www/bixel/cam/First.jpg' % (date,exact_time))
-        os.system('sudo cp stills/Exp2_%s%s.jpg /var/www/bixel/cam/FirstExp2.jpg' % (date,exact_time))
+        os.system('sudo cp stills/Snap%s%s.jpg cam/First.jpg' % (date,exact_time))
+        os.system('sudo cp stills/Exp2_%s%s.jpg cam/FirstExp2.jpg' % (date,exact_time))
     else:
-        os.system('sudo cp stills/Snap%s%s.jpg /var/www/bixel/cam/Latest.jpg' % (date,exact_time))
-        os.system('sudo cp stills/Exp2_%s%s.jpg /var/www/bixel/cam/LatestExp2.jpg' % (date,exact_time))
+        os.system('sudo cp stills/Snap%s%s.jpg cam/Latest.jpg' % (date,exact_time))
+        os.system('sudo cp stills/Exp2_%s%s.jpg cam/LatestExp2.jpg' % (date,exact_time))
 
     time.sleep(0.1)
 ######################################
@@ -221,7 +221,7 @@ def write2log():
     plt.savefig('plotTempHum.png')
     plt.close()
     #send to html page
-    os.system('sudo cp plotTempHum.png /var/www/bixel/cam/plotTempHum.png')
+    os.system('sudo cp plotTempHum.png cam/plotTempHum.png')
 ######################################
 
 ######################################
@@ -281,10 +281,6 @@ elif cycles == 0:
         #AND COMMENT THIS:
         StripeIllum(k)
         k=k+1
-
-
-##Make Gif##
-#os.system('sudo convert -delay 20 -loop 0 stills/Snap*.jpg /var/www/bixel/cam/timelapse.gif')
 
 ##Turn Off##
 pixels.fill((0,0,0))
