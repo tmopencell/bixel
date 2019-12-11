@@ -48,7 +48,7 @@ type ctrl+w and enter root to find the line:
 
 <h2>ISO 800: First and Latest Images</h2>
 <a href="cam/FirstExp2.jpg">
-<img src="FirstExp2.jpg" alt="First_Image_Exp2" height="308" width="410" ></a>
+<img src="cam/FirstExp2.jpg" alt="First_Image_Exp2" height="308" width="410" ></a>
 <a href="cam/LatestExp2.jpg">
 <img src="cam/LatestExp2.jpg" alt="Latest_Image_Exp2" height="308" width="410" ></a>
 
