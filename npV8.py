@@ -42,13 +42,13 @@ os.system('sudo mv stills/* backupstills/')
 
 #SET VARIABLES HERE
 ###################
-tblue = 20 # Length of time in blue phase (seconds)
+tblue = 300 # Length of time in blue phase (seconds)
 tgreen = 1 # Length of time in green phase (seconds)
             # NB: switching takes approx 0.5s and must be completed
             # before taking an image
 cycles = 0 # For continuous loop set to 0
-maxtemp = 29.4 # Set desired temperature in Celsius  (temp not guaranteed!)
-g = 3 # Update gif every x minutes (APPROX) (Takes up to a few mins)
+maxtemp = 28.4 # Set desired temperature in Celsius  (temp not guaranteed!)
+g = 20 # Update gif every x minutes (APPROX) (Takes up to a few mins)
 gifIter = int((g*60)/(tblue+20)) # i.e. update gif every gifIter iterations (APPROX)
 maxgifimages = 40 # definitely less than 100 to avoid slowdown
 ###################
